@@ -2,21 +2,27 @@
 const form = document.querySelector(".login-form")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    const  {
-       elements: { email  ,password }
-    } = e.currentTarget
-   
-    if (email.value === "" || password.value === "") {
+ const eventElements = e.currentTarget.elements
+   if (eventElements.email.value === "" || eventElements.password.value === "") {
       
       return  alert("You need to fill all fields")
     } 
- 
-    const objectSubmit = {
-    email : `${email.value}`,
-    password : ` ${password.value}`,
-    }
+    
+    createNewobject(e)
   
- console.log(objectSubmit)
-e.currentTarget.reset();
+ 
+ e.currentTarget.reset();
 })
-// console.log(objectSubmit)
+function createNewobject(e) {
+      const  {
+       elements: { email  ,password }
+      } = e.currentTarget
+   const objectSubmit = {
+    email : `${email.value}`,
+      password: ` ${password.value}`
+    
+   }
+    
+    console.log(objectSubmit) 
+}
+

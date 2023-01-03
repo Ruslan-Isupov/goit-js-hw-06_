@@ -1,4 +1,4 @@
-const listOfCategories = document.getElementById('categories') 
+const listOfCategories = document.getElementById('categories')
 console.log("Number of categories:",listOfCategories.children.length)
 const listOfItems = document.querySelectorAll('.item')
 function showItems (items) {
@@ -11,4 +11,3 @@ function showItems (items) {
 
 }
 console.log(showItems(listOfItems))
-// undefined только бы убрать
